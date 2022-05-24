@@ -16,7 +16,6 @@ namespace ariel {
     class OrgChart {
     public:
         Iterator* start;
-        Iterator* over;
         Node* root;
         Node* curr;
         vector<Node*> allNodes;
@@ -31,7 +30,7 @@ namespace ariel {
 
         OrgChart& add_sub(const string& curr, const string& child);
 
-        friend ostream& operator<<(ostream &out, const OrgChart &Orgchart);
+        friend ostream& operator<<(ostream &out, OrgChart &Orgchart);
 
         Iterator begin_preorder();
         Iterator begin_level_order();
